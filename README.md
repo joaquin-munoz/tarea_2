@@ -66,6 +66,7 @@ Este sistema ha sido desarrollado en lenguaje C y puede ejecutarse fácilmente u
 # A mejorar:
 
 - crear atajos en caso de que el usuario se equivoque y salte error para poder intentarlo nuevamente sin tener que volver al inicio o en que caso que quiera devolverse hacia atras.
+-hacer una funcion que lea tildes para tener una imagen mas limpia de los datos en caso de alguno de estos tener tildes o simbolos que se vean algo "corruptos".
 
 # Ejemplo de uso
 **Paso 1: cargar canciones**
@@ -76,7 +77,7 @@ Este sistema ha sido desarrollado en lenguaje C y puede ejecutarse fácilmente u
 
 **Paso 2: buscar por genero**
 
-    el usuario selecciona la opcion 2 y pone el tipo de genero "anime", y este mostraria las canciones con el genero anime 
+    - si el usuario selecciona la opcion 3, debe pone el nombre del artista "Zarcort", y este mostraria las canciones con el genero anime (se aceptan mayusculas,tildes, etc).
 
     **********
 
@@ -91,12 +92,46 @@ Este sistema ha sido desarrollado en lenguaje C y puede ejecutarse fácilmente u
     .....
 
     **********
-**Paso 2: salir**
+
+    - si el usuario selecciona la opcion 3, debe pone el nombre del artista "Zarcort", y este mostraria las canciones con el genero anime (se aceptan mayusculas,tildes,etc).
+
+    **********
+
+    Opción seleccionada: 3) buscar por artista 
+
+    Ingrese el artista de la musica: Zarcort
+
+    ID: 5396, artista: Zarcort, album_name: Resident Evil Rap, track_name: Resident Evil Rap , tempo: 92.011 
+    ID: 5488, artista: Zarcort, album_name: Halo 4 Rap, track_name: Halo 4 Rap , tempo: 128.453
+    .....
+    .....
+
+    **********
+    - si el usuario selecciona la opcion 4, debe seleccionar el tempo del que desee obtener las canciones, y este mostraria las canciones con el con el tempo elejido.
+
+    **********
+
+    Opción seleccionada: 4) buscar por tempo 
+
+    Ingrese el tempo de la musica: 1
+
+    1) Lentas(menos de 80 BPM):
+    2) Moderadas(entre 80 y 120 BPM):
+    3) Rápidas(Tempo mayor a 120 BPM):
+
+    ID: 103620, artista: Amber Mark, album_name: Halloween & Chill, track_name: Foreign Things , tempo: 75.075
+    ID: 103627, artista: Amber Mark, album_name: Best R&B Tunes, track_name: Competition - Single Edit , tempo: 74.993 
+    .....
+    .....
+
+    **********
+
+**Paso 3: salir**
 
     -si joaquin no quisiera realizar ninguna otra operacion seleccionaria salir(opcion 5) y el programa mostraria el siguiente mensaje:
 
     **********
 
-    hasta luego, ten un buen dia
+    hasta luego, ten un buen dia.
     
     **********
