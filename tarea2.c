@@ -211,6 +211,7 @@ int main() {
       Buscar_por_tempo(song_tempo);
       break;
     case '5':
+      printf("hasta luego, ten un buen dia\n");
       break;
     }
     presioneTeclaParaContinuar();
