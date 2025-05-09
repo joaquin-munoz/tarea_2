@@ -101,7 +101,7 @@ void buscar_por_genero(Map *song_genres) {
   char genero[100];
 
   // Solicita al usuario el genero de la musica
-  printf("Ingrese el género de la musica: ");
+  printf("Ingrese el genero de la musica: ");
   scanf(" %[^\n]s", genero) ;; // Lee el genero del teclado
 
   MapPair *pair = map_search(song_genres, genero); // buscamos la cancion
@@ -141,12 +141,7 @@ void buscar_por_artista(Map *song_artista){
   }
   else printf("el artista ingresado no existe o es invalido\n"); //en caso contrario mostramos el siguiente mensaje
 }
-/*4. La usuaria ingresa la “velocidad” deseada de las canciones:
-    - **Lentas** (Tempo menos de 80 BPM)
-    - **Moderadas** (Tempo entre 80 y 120 BPM)
-    - **Rápidas** (Tempo mayor a 120 BPM)
-    
-    Luego, la aplicación muestra todas las canciones de esa categoría junto con su información.*/
+
 void mostrar_tempo(Map *song_tempo,char *a){
   MapPair *pair = map_search(song_tempo, a);
   List* tempo_canciones = pair->value;
@@ -160,12 +155,11 @@ void mostrar_tempo(Map *song_tempo,char *a){
 }
 void Buscar_por_tempo(Map *song_tempo){
   char tempo;
-  //MapPair *pair = map_search(song_tempo, tempo);  buscamos la cancion(value(canciones) y key(tempo))
   puts("Ingrese el tempo de la musica:");
 
   puts("1) Lentas(menos de 80 BPM)");
   puts("2) Moderadas(entre 80 y 120 BPM");
-  puts("3) Rápidas(Tempo mayor a 120 BPM)");
+  puts("3) Rapidas(Tempo mayor a 120 BPM)");
   scanf(" %c", &tempo); // Lee el tempo del teclado
 
   switch (tempo) {
@@ -184,17 +178,16 @@ int main() {
   char opcion; // Variable para almacenar una opción ingresada por el usuario
                
 
-  // Crea un mapa para almacenar películas, utilizando una función de
+  // Crea un mapa para almacenar artista, tempo , generos para almacenar las canciones.
   // comparación que trabaja con claves de tipo string.
   Map *song_artista = map_create(is_equal_str);
   Map *song_tempo = map_create(is_equal_str);
   Map *song_genres = map_create(is_equal_str);
 
-  // Recuerda usar un mapa por criterio de búsqueda
 
   do {
     mostrarMenuPrincipal();
-    printf("Ingrese su opción: ");
+    printf("Ingrese su opcion: ");
     scanf(" %c", &opcion);
 
     switch (opcion) {
