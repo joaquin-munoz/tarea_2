@@ -24,11 +24,11 @@ Este sistema ha sido desarrollado en lenguaje C y puede ejecutarse fácilmente u
     - Abre el archivo principal por ejemplo en tarea2.c
     - Abre la terminal integrada Terminal > Nueva terminal, puedes usar la terminal que desees , recomendada git bash.
     - En la terminal, compila el programa con el siguiente comando: 
-        (gcc tdas/*.c tarea3.c -Wno-unused-result -o tarea3)
+        (gcc tdas/*.c tarea2.c -Wno-unused-result -o tarea2)
         
 4. Ejecuta el programa
     - Una vez compilado, puedes ejecutar la aplicación con:
-        (./tarea3)        
+        (./tarea2)        
 
 ## Funcionalidades 
     ### **Funcionalidades para la aplicación:**
